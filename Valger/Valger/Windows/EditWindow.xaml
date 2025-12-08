@@ -1,0 +1,47 @@
+﻿<Window x:Class="Valger.Windows.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Valger.Windows"
+        mc:Ignorable="d"
+        Title="EditWindow" Height="450" Width="800">
+    <DockPanel Margin="15" LastChildFill="True">
+        <StackPanel HorizontalAlignment="Center" DockPanel.Dock="Top" Orientation="Horizontal">
+            <StackPanel Width="200" Margin="5 0" Orientation="Vertical">
+                <Label>Article</Label>
+                <TextBox Name="tbox_article" />
+                <Label>Name</Label>
+                <TextBox Name="tbox_name" />
+                <Label>Available amount</Label>
+                <TextBox Name="tbox_amount" />
+            </StackPanel>
+
+            <StackPanel Width="200" Margin="5 0" Orientation="Vertical">
+                <Label>Rental unit</Label>
+                <TextBox Name="tbox_unit" />
+                <Label>Rental cost</Label>
+                <TextBox Name="tbox_cost" />
+                <Label>Discount</Label>
+                <TextBox Name="tbox_discount" />
+            </StackPanel>
+
+            <StackPanel Width="200" Margin="5 0" Orientation="Vertical">
+                <Label>Supplier</Label>
+                <ComboBox Name="cb_supplier" />
+                <Label>Manufacturer</Label>
+                <ComboBox Name="cb_man" />
+                <Label>Type</Label>
+                <ComboBox Name="cb_type" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Right" Width="auto" Orientation="Horizontal" Margin="0 10 0 0" DockPanel.Dock="Bottom">
+            <Button Click="bt_cancel_Click" Name="bt_cancel" Margin="5 0" Padding="5">Cancel</Button>
+            <Button Click="bt_create_Click" Name="bt_create" Margin="5 0" Padding="5">Edit</Button>
+        </StackPanel>
+
+        <Label Height="25" DockPanel.Dock="Top">Description</Label>
+        <TextBox Name="tbox_description" DockPanel.Dock="Bottom" />
+    </DockPanel>
+</Window>
