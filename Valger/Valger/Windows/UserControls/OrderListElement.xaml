@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="Valger.Windows.UserControls.OrderListElement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Valger.Windows.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="400">
+    <Border BorderBrush="Black"
+        BorderThickness="2"
+        Background="White"
+        Padding="15"
+        Margin="10">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- ===== ЛЕВЫЙ СТОЛБЕЦ ===== -->
+            <StackPanel Grid.Column="0" >
+                <TextBlock Text="Артикул товара" FontWeight="Bold"/>
+                <TextBlock Text="{Binding Equipment.Article}"
+                       FontSize="14" FontWeight="SemiBold"/>
+
+                <TextBlock Text="Адрес выдачи" FontWeight="Bold" Margin="0,10,0,0"/>
+                <TextBlock Text="{Binding PickupPoint.Address}"
+                       FontSize="14" TextWrapping="Wrap"/>
+
+                <TextBlock Text="Дата начала аренды" FontWeight="Bold" Margin="0,10,0,0"/>
+                <TextBlock Text="{Binding RentalStartDate, StringFormat=dd.MM.yyyy}"
+                       FontSize="14" FontWeight="SemiBold"/>
+            </StackPanel>
+
+            <!-- ===== ПРАВЫЙ СТОЛБЕЦ ===== -->
+            <StackPanel Grid.Column="1" >
+                <TextBlock Text="Количество аренды" FontWeight="Bold"/>
+                <TextBlock Text="{Binding RentalQuantity}"
+                       FontSize="14" FontWeight="SemiBold"/>
+            </StackPanel>
+
+        </Grid>
+    </Border>
+</UserControl>

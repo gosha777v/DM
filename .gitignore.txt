@@ -1,0 +1,60 @@
+
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+
+## Игнорирование пользовательских файлов ##
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Игнорирование временных файлов ##
+*.tmp
+*.temp
+
+## Игнорирование файлов базы данных ##
+*.mdf
+*.ldf
+*.sdf
+
+## Игнорирование результатов сборки ##
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]uild/
+[Bb]uilds/
+
+## Игнорирование файлов пакетов NuGet ##
+packages/
+*.nupkg
+
+## Игнорирование файлов резервных копий ##
+*.bak
+*.tmp
+
+## Игнорирование специфичных для .NET файлов ##
+*.pdb
+*.cache
+.vs/
+.vscode/
+
+## Игнорирование файлов подключения (секреты) ##
+appsettings.json
+appsettings.*.json
+ConnectionStrings.config
+
+## Игнорирование резервных файлов ##
+_ReSharper.*
+*.resharper
+*.orig
+
+## Игнорирование локальной базы данных SQL Server ##
+App_Data/
+*.mdf
+*.ldf
